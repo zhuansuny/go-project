@@ -62,7 +62,7 @@ func (this *Transfer) WritePkg(data []byte) (err error) {
 		fmt.Println("conn.Write(buf) fail", err)
 		return
 	}
-	//fmt.Printf("服务器，发送消息的长度=%d 内容=%s", len(data), string(data))
+	fmt.Printf("服务端发送内容=%s", string(data))
 
 	n, err = this.Conn.Write(data)
 	if err != nil || n != int(pkgLen) {

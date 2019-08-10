@@ -5,15 +5,13 @@ package main
 import (
 	"fmt"
 	"go_code/chapter16_chatRoom/client/process"
+	"os"
 )
-
-func loginSurface() {
-
-}
 
 func main() {
 	var key int
 	var userId int
+	var userName string
 	var Password string
 	for {
 		fmt.Println("---------------------------欢迎登陆多人聊天系统---------------------")
@@ -39,10 +37,22 @@ func main() {
 
 		case 2:
 			fmt.Println("注册用户")
-			//registSurface()
+			fmt.Println("请输入用户的id")
+			fmt.Scanf("%d\n", &userId)
+
+			fmt.Println("请输入用户的密码")
+			fmt.Scanf("%v\n", &Password)
+			fmt.Println("请输入用户的昵称")
+			fmt.Scanf("%v\n", &userName)
+			up := &process.UserProcess{}
+			err := up.Register(userId, userName, Password)
+			if err != nil {
+				fmt.Println("注册失败，err=", err)
+			}
+
 		case 3:
 			fmt.Println("退出系统")
-			break
+			os.Exit(0)
 		default:
 			fmt.Println("输入的数字有误，请重新输入")
 

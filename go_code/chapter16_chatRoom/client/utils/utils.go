@@ -19,7 +19,7 @@ type Transfer struct {
 func (this *Transfer) ReadPkg() (mes message.Message, err error) {
 
 	//buf := make([]byte, 8096)
-	fmt.Println("读取服务端发送的数据。。。")
+	//fmt.Println("读取服务端发送的数据。。。")
 	//conn.Read 只有在conn没有关闭的情况下，才会阻塞
 	//如果客户端关闭conn，就不会堵塞
 	_, err = this.Conn.Read(this.Buf[:4])
@@ -31,7 +31,7 @@ func (this *Transfer) ReadPkg() (mes message.Message, err error) {
 		fmt.Println("conn.Read1 err=", err)
 		return
 	}
-	fmt.Println("读取的buf长度为", this.Buf[:4])
+	//fmt.Println("读取的buf长度为", this.Buf[:4])
 
 	var pkgLen uint32
 	pkgLen = binary.BigEndian.Uint32(this.Buf[0:4])
@@ -62,7 +62,7 @@ func (this *Transfer) WritePkg(data []byte) (err error) {
 		fmt.Println("conn.Write(buf) fail", err)
 		return
 	}
-	//fmt.Printf("服务器，发送消息的长度=%d 内容=%s", len(data), string(data))
+	//fmt.Printf("客户端发送内容=%s", string(data))
 
 	n, err = this.Conn.Write(data)
 	if err != nil || n != int(pkgLen) {

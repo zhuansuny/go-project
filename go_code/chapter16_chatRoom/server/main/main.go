@@ -3,7 +3,9 @@ package main
 //监听，等待客户端连接，以及初始化的工作
 import (
 	"fmt"
+	"go_code/chapter16_chatRoom/server/model"
 	"net"
+	"time"
 )
 
 func process(conn net.Conn) {
@@ -19,7 +21,16 @@ func process(conn net.Conn) {
 	}
 }
 
+func init() {
+	initPool("localhost:6379", 16, 0, 300*time.Second)
+	initUserDao()
+}
+
+func initUserDao() {
+	model.MyUserDao = model.NewUserDao(pool)
+}
 func main() {
+
 	fmt.Println("服务器在8889端口监听。。。。")
 	listen, err := net.Listen("tcp", "0.0.0.0:8889")
 

@@ -15,6 +15,8 @@ type Processor struct {
 
 //根据客户端发送的消息种类不同，决定调用哪个函数来处理
 func (this *Processor) serverProcessMes(mes *message.Message) (err error) {
+
+	//fmt.Println("mes=", mes)
 	switch mes.Type {
 	case message.LoginMesType:
 		//处理登陆
@@ -23,10 +25,28 @@ func (this *Processor) serverProcessMes(mes *message.Message) (err error) {
 			Conn: this.Conn,
 		}
 		err = up.ServerProcessLogin(mes)
+
 	case message.RegisterMesType:
+		up := &process2.UserProcess{
+			Conn: this.Conn,
+		}
+		err = up.ServerProcessRegister(mes)
+	case message.SmsMesType:
+		sp := &process2.SysProcess{}
+
+		err = sp.SendGroundMes(mes)
+	case message.SmMesType:
+		sp := &process2.SysProcess{}
+
+		err = sp.SentPrivateMes(mes)
+	case message.NotifyUserStatusMesType:
+		up := &process2.UserProcess{
+			Conn: this.Conn,
+		}
+		err = up.NotifyOthersOfflineUser(mes)
 
 	default:
-		fmt.Println("消息类型不存在，无法处理")
+		fmt.Println("消息类型错误，无法处理")
 	}
 	return
 }
