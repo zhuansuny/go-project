@@ -8,10 +8,10 @@ import (
 	"net"
 )
 
-type SysProcess struct {
+type SmsProcess struct {
 }
 
-func (this *SysProcess) SendGroundMes(mes *message.Message) (err error) {
+func (this *SmsProcess) SendGroundMes(mes *message.Message) (err error) {
 	//遍历服务器端的onlineUsers map[int]*UserProcess
 	//将消息转发取出
 	var smsMes message.SmsMes
@@ -36,7 +36,7 @@ func (this *SysProcess) SendGroundMes(mes *message.Message) (err error) {
 
 }
 
-func (this *SysProcess) SentPrivateMes(mes *message.Message) (err error) {
+func (this *SmsProcess) SentPrivateMes(mes *message.Message) (err error) {
 	//遍历服务器端的onlineUsers map[int]*UserProcess
 	//将消息转发取出
 	var smMes message.SmMes
@@ -50,19 +50,22 @@ func (this *SysProcess) SentPrivateMes(mes *message.Message) (err error) {
 		fmt.Println("序列化失败", err)
 		return
 	}
-
+	flag := false //是否在线标志符
 	for id, up := range userMgr.onlineUsers {
-		if id != smMes.AcceptUserId {
-			continue
+		if id == smMes.AcceptUserId {
+			flag = true //表示在线
+			this.SendGroundOnlineUser(data, up.Conn)
 		}
-		this.SendGroundOnlineUser(data, up.Conn)
+	}
+	if !flag { //如果离线，将消息添加到离线消息map中
+		userOfflineMes.AddofflineUser(smMes.AcceptUserId, smMes)
 	}
 	return
 
 }
 
 //发送消息
-func (this *SysProcess) SendGroundOnlineUser(data []byte, conn net.Conn) (err error) {
+func (this *SmsProcess) SendGroundOnlineUser(data []byte, conn net.Conn) (err error) {
 	//创建一个Tranfer
 	tf := &utils.Transfer{
 		Conn: conn,

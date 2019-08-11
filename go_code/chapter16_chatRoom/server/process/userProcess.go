@@ -122,7 +122,8 @@ func (this *UserProcess) NotifyMeOffline(userId int) {
 
 //serverProcessLogin函数，专门处理登陆请求
 func (this *UserProcess) ServerProcessLogin(mes *message.Message) (err error) {
-
+	flag := false
+	var index int
 	var loginMes message.LoginMes
 	err = json.Unmarshal([]byte(mes.Data), &loginMes)
 	if err != nil {
@@ -158,9 +159,18 @@ func (this *UserProcess) ServerProcessLogin(mes *message.Message) (err error) {
 		this.NotifyOthersOnlineUser(loginMes.UserId)
 		//将当前在线用户的id放入到loginResMes.UsersId
 		//遍历userMgr.onlineUsers
+
 		for id, _ := range userMgr.onlineUsers {
 			loginResMes.UsersId = append(loginResMes.UsersId, id)
 		}
+
+		for i, _ := range userOfflineMes.offlineUsers {
+			if this.UserId == i {
+				flag = true
+				index = i
+			}
+		}
+
 		fmt.Println(user, "登陆成功")
 	}
 
@@ -191,6 +201,35 @@ func (this *UserProcess) ServerProcessLogin(mes *message.Message) (err error) {
 		Conn: this.Conn,
 	}
 	err = tran.WritePkg(data)
+
+	//-------------发送离线信息-------------
+	if flag {
+		var resMes1 message.Message
+		resMes1.Type = message.SmMesType
+		offlineMes := userOfflineMes.offlineUsers[index]
+		data1, err1 := json.Marshal(offlineMes)
+		if err1 != nil {
+			fmt.Println("json.Marshal fail", err)
+			return
+		}
+
+		//4. 将data 赋值给 resMes
+		resMes1.Data = string(data1)
+
+		//5. 对resMes 进行序列化，准备发送
+		data1, err1 = json.Marshal(resMes1)
+		if err1 != nil {
+			fmt.Println("json.Marshal fail", err)
+			return
+		}
+		//创建utils实例
+		var tran1 = utils.Transfer{
+			Conn: this.Conn,
+		}
+		err = tran1.WritePkg(data1)
+		userOfflineMes.DelonlineUser(index) //发送完毕将该消息删除
+
+	}
 	return
 }
 

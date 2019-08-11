@@ -32,11 +32,11 @@ func (this *Processor) serverProcessMes(mes *message.Message) (err error) {
 		}
 		err = up.ServerProcessRegister(mes)
 	case message.SmsMesType:
-		sp := &process2.SysProcess{}
+		sp := &process2.SmsProcess{}
 
 		err = sp.SendGroundMes(mes)
 	case message.SmMesType:
-		sp := &process2.SysProcess{}
+		sp := &process2.SmsProcess{}
 
 		err = sp.SentPrivateMes(mes)
 	case message.NotifyUserStatusMesType:
