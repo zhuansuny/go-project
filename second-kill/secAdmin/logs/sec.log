@@ -1,0 +1,394 @@
+2019/10/01 10:38:51.284 [D] [init.go:93]  connect to mysql succ
+2019/10/01 10:38:51.287 [D] [init.go:99]  connect to etcd succ
+2019/10/01 10:38:51.417 [I] [asm_amd64.s:1333]  http server Running on http://127.0.0.1:9090
+2019/10/01 10:58:25.741 [D] [init.go:93]  connect to mysql succ
+2019/10/01 10:58:25.744 [D] [init.go:99]  connect to etcd succ
+2019/10/01 10:58:25.861 [I] [asm_amd64.s:1333]  http server Running on http://127.0.0.1:9090
+2019/10/01 11:00:10.279 [D] [server.go:2741]  |      127.0.0.1|[43m 404 [0m|    46.0256ms| nomatch|[44m GET     [0m /log/list
+2019/10/01 11:01:17.499 [D] [server.go:2741]  |      127.0.0.1|[43m 404 [0m|     1.0026ms| nomatch|[44m GET     [0m /log/list
+2019/10/01 11:01:36.788 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 11:01:37.685 [D] [asm_amd64.s:522]  get app list succ, data:[0xc00018cb40 0xc00018cb70]
+2019/10/01 11:01:37.693 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   905.1937ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 11:01:38.547 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|      995.6µs|   match|[44m GET     [0m /static/image/favicon.ico
+2019/10/01 11:01:41.099 [D] [activity.go:26]  get activity succ,  activity list is[[]]
+2019/10/01 11:01:41.108 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   129.2421ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 11:01:43.944 [D] [server.go:2741]  |      127.0.0.1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /ativity/apply
+2019/10/01 11:02:43.264 [D] [activity.go:26]  get activity succ,  activity list is[[]]
+2019/10/01 11:02:43.267 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     4.0023ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 11:02:45.261 [D] [server.go:2741]  |      127.0.0.1|[43m 404 [0m|      996.1µs| nomatch|[44m GET     [0m /ativity/apply
+2019/10/01 11:03:06.203 [D] [activity.go:26]  get activity succ,  activity list is[[]]
+2019/10/01 11:03:06.210 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     7.9916ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 11:03:06.843 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|      991.8µs|   match|[44m GET     [0m /static/image/favicon.ico
+2019/10/01 11:03:08.379 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     3.0008ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/01 11:03:55.573 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 11:03:55.574 [D] [asm_amd64.s:522]  get app list succ, data:[0xc00012a210 0xc00012a270]
+2019/10/01 11:03:55.586 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    13.0085ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 11:06:07.302 [W] [activity.go:121]  select from mysql failed, err:Error 1054: Unknown column 'buy_rate' in 'field list' sql:insert into activity(name, product_id, start_time, end_time, total, sec_speed, buy_limit, buy_rate)values(?,?,?,?,?,?,?,?)
+2019/10/01 11:06:07.306 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   133.3119ms|   match|[44m GET     [0m /activity/create   r:/activity/create
+2019/10/01 11:07:08.331 [W] [activity.go:121]  select from mysql failed, err:Error 1264: Out of range value for column 'start_time' at row 1 sql:insert into activity(name, product_id, start_time, end_time, total, sec_speed, buy_limit, buy_rate)values(?,?,?,?,?,?,?,?)
+2019/10/01 11:07:08.335 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    83.1619ms|   match|[44m GET     [0m /activity/create   r:/activity/create
+2019/10/01 11:08:56.729 [D] [activity.go:121]  insert into database succ
+2019/10/01 11:08:56.729 [D] [activity.go:169]  start get from etcd succ
+2019/10/01 11:09:06.730 [E] [activity.go:169]  get [/secskill/secProxy/product] from etcd failed, err:context deadline exceeded
+2019/10/01 11:09:27.313 [D] [activity.go:26]  get activity succ,  activity list is[[0xc00024a360]]
+2019/10/01 11:09:27.316 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|      5.014ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 11:09:36.883 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     3.0018ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/01 11:09:39.866 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     2.9992ms|   match|[44m GET     [0m /activity/create   r:/activity/create
+2019/10/01 11:15:48.467 [D] [init.go:93]  connect to mysql succ
+2019/10/01 11:15:48.472 [D] [init.go:99]  connect to etcd succ
+2019/10/01 11:15:48.633 [I] [asm_amd64.s:1333]  http server Running on http://127.0.0.1:9090
+2019/10/01 11:15:54.979 [W] [activity.go:121]  select from mysql failed, err:Error 1062: Duplicate entry '1' for key 'product_id' sql:insert into activity(name, product_id, start_time, end_time, total, sec_speed, buy_limit, buy_rate)values(?,?,?,?,?,?,?,?)
+2019/10/01 11:15:55.021 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   1.9109349s|   match|[44m GET     [0m /activity/create   r:/activity/create
+2019/10/01 11:16:05.843 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 11:16:05.843 [D] [asm_amd64.s:522]  get app list succ, data:[0xc000114ff0 0xc000115980]
+2019/10/01 11:16:05.846 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     3.0029ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 11:16:16.301 [D] [activity.go:121]  insert into database succ
+2019/10/01 11:16:28.125 [D] [activity.go:26]  get activity succ,  activity list is[[0xc00022a480 0xc00022a510]]
+2019/10/01 11:16:28.129 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     3.9883ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 11:18:10.086 [D] [init.go:93]  connect to mysql succ
+2019/10/01 11:18:10.091 [D] [init.go:99]  connect to etcd succ
+2019/10/01 11:18:10.218 [I] [asm_amd64.s:1333]  http server Running on http://127.0.0.1:9090
+2019/10/01 11:18:14.403 [D] [activity.go:26]  get activity succ,  activity list is[[0xc0002283f0]]
+2019/10/01 11:18:14.423 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   112.2821ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 11:18:16.867 [D] [activity.go:26]  get activity succ,  activity list is[[0xc00023a2d0]]
+2019/10/01 11:18:16.870 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     3.0003ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 11:18:17.336 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|      999.9µs|   match|[44m GET     [0m /static/image/favicon.ico
+2019/10/01 11:18:20.803 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     3.0002ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/01 11:18:44.107 [D] [activity.go:121]  insert into database succ
+2019/10/01 11:18:44.107 [D] [activity.go:169]  start get from etcd succ
+2019/10/01 11:18:50.299 [D] [activity.go:26]  get activity succ,  activity list is[[0xc000228630 0xc0002286c0]]
+2019/10/01 11:18:50.302 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|      4.005ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 11:18:54.107 [E] [activity.go:169]  get [/secskill/secProxy/product] from etcd failed, err:context deadline exceeded
+2019/10/01 11:22:24.565 [D] [init.go:93]  connect to mysql succ
+2019/10/01 11:22:24.573 [D] [init.go:99]  connect to etcd succ
+2019/10/01 11:22:24.706 [I] [asm_amd64.s:1333]  http server Running on http://127.0.0.1:9090
+2019/10/01 11:22:29.167 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     7.0052ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/01 11:22:43.341 [D] [activity.go:121]  insert into database succ
+2019/10/01 11:22:43.341 [D] [activity.go:169]  start get from etcd succ
+2019/10/01 11:22:48.912 [D] [activity.go:26]  get activity succ,  activity list is[[0xc0004302d0 0xc000430360]]
+2019/10/01 11:22:48.919 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     7.9873ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 11:22:53.341 [E] [activity.go:169]  get [/secskill/secProxy/product] from etcd failed, err:context deadline exceeded
+2019/10/01 11:28:28.211 [D] [init.go:93]  connect to mysql succ
+2019/10/01 11:28:28.215 [D] [init.go:99]  connect to etcd succ
+2019/10/01 11:28:28.341 [I] [asm_amd64.s:1333]  http server Running on http://127.0.0.1:9090
+2019/10/01 11:28:38.539 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     7.0053ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/01 11:28:41.284 [D] [activity.go:26]  get activity succ,  activity list is[[0xc000228480]]
+2019/10/01 11:28:41.295 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   603.0521ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 11:28:44.752 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     7.0484ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/01 11:28:46.732 [D] [activity.go:26]  get activity succ,  activity list is[[0xc0002283f0]]
+2019/10/01 11:28:46.740 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     9.0067ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 11:28:50.793 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     5.0038ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/01 11:29:02.101 [D] [activity.go:121]  insert into database succ
+2019/10/01 11:29:02.101 [D] [activity.go:169]  start get from etcd succ
+2019/10/01 11:29:09.356 [D] [activity.go:26]  get activity succ,  activity list is[[0xc0002106c0 0xc000210750]]
+2019/10/01 11:29:09.361 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     6.0016ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 11:29:12.102 [E] [activity.go:169]  get [/seckill/secProxy/product] from etcd failed, err:context deadline exceeded
+2019/10/01 11:37:32.111 [D] [init.go:93]  connect to mysql succ
+2019/10/01 11:37:32.118 [D] [init.go:99]  connect to etcd succ
+2019/10/01 11:37:32.287 [I] [asm_amd64.s:1333]  http server Running on http://127.0.0.1:9090
+2019/10/01 11:37:35.421 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    36.0207ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/01 11:37:36.711 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    10.0071ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/01 11:37:37.338 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     3.0024ms|   match|[44m GET     [0m /static/image/favicon.ico
+2019/10/01 11:37:39.210 [D] [activity.go:26]  get activity succ,  activity list is[[0xc00022a3f0 0xc00022a480]]
+2019/10/01 11:37:39.215 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    170.198ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 11:37:55.663 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|      3.999ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/01 11:38:05.034 [D] [activity.go:121]  insert into database succ
+2019/10/01 11:38:05.035 [D] [activity.go:169]  start get from etcd succ
+2019/10/01 11:38:05.037 [D] [activity.go:169]  get from etcd succ, resp:&{cluster_id:14841639068965178418 member_id:10276657743932975437 revision:172 raft_term:13  [key:"/seckill/secProxy/product" create_revision:171 mod_revision:172 version:2 value:"[{\"ProductId\":1029,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1027,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10}]" ] false 1}
+2019/10/01 11:38:05.037 [D] [activity.go:169]  key[0] valud[key:"/seckill/secProxy/product" create_revision:171 mod_revision:172 version:2 value:"[{\"ProductId\":1029,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1027,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10}]" ]
+2019/10/01 11:38:05.037 [D] [activity.go:169]  sec info conf is [[{1029 1569899504 1569903104 0 1000 1000 2 0.1 10} {1027 1569899504 1569903104 0 2000 1000 2 0.1 10}]]
+2019/10/01 11:38:05.039 [D] [activity.go:131]  put to etcd succ, data:[{"ProductId":1029,"StartTime":1569899504,"EndTime":1569903104,"Status":0,"Total":1000,"Left":1000,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10},{"ProductId":1027,"StartTime":1569899504,"EndTime":1569903104,"Status":0,"Total":2000,"Left":1000,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10},{"ProductId":1,"StartTime":1569985698,"EndTime":1569989298,"Status":0,"Total":111,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.2,"SoldMaxLimit":10}]
+2019/10/01 11:38:05.039 [D] [server.go:2741]  |      127.0.0.1|[47m 301 [0m|   167.2578ms|   match|[44m GET     [0m /activity/create   r:/activity/create
+2019/10/01 11:38:05.067 [D] [activity.go:26]  get activity succ,  activity list is[[0xc00020c360 0xc00020c3f0]]
+2019/10/01 11:38:05.070 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     4.0007ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 11:49:11.665 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 11:49:11.724 [D] [asm_amd64.s:522]  get app list succ, data:[0xc000114a80 0xc000114ab0]
+2019/10/01 11:49:11.730 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    65.1123ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 11:49:15.662 [D] [activity.go:26]  get activity succ,  activity list is[[0xc00020c360 0xc00020c3f0]]
+2019/10/01 11:49:15.666 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    42.2789ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 11:54:22.566 [D] [activity.go:26]  get activity succ,  activity list is[[0xc00020c360 0xc00020c3f0]]
+2019/10/01 11:54:22.571 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     6.0075ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 11:54:23.175 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/image/favicon.ico
+2019/10/01 11:59:10.209 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 11:59:10.230 [D] [asm_amd64.s:522]  get app list succ, data:[0xc000354150 0xc000354180]
+2019/10/01 11:59:10.237 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    29.0728ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 11:59:13.537 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 11:59:13.544 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     7.0042ms|   match|[44m GET     [0m /product/apply   r:/product/apply
+2019/10/01 11:59:35.663 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 11:59:36.066 [D] [product.go:114]  insert into database succ
+2019/10/01 11:59:36.066 [D] [server.go:2741]  |      127.0.0.1|[47m 302 [0m|   402.8954ms|   match|[44m GET     [0m /product/create   r:/product/create
+2019/10/01 11:59:36.213 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 11:59:36.215 [D] [asm_amd64.s:522]  get app list succ, data:[0xc0002290e0 0xc000229110 0xc000229140]
+2019/10/01 11:59:36.225 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    12.0085ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 11:59:40.089 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     4.0023ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/01 12:00:10.065 [E] [activity.go:121]  product exists failed, err:product[64] is not exists
+2019/10/01 12:00:10.071 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   100.7155ms|   match|[44m GET     [0m /activity/create   r:/activity/create
+2019/10/01 12:03:50.595 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 12:03:50.596 [D] [asm_amd64.s:522]  get app list succ, data:[]
+2019/10/01 12:03:50.603 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     9.0066ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 12:03:52.615 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 12:03:52.619 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     4.0023ms|   match|[44m GET     [0m /product/apply   r:/product/apply
+2019/10/01 12:03:59.739 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 12:03:59.831 [D] [product.go:114]  insert into database succ
+2019/10/01 12:03:59.831 [D] [server.go:2741]  |      127.0.0.1|[47m 302 [0m|    92.3274ms|   match|[44m GET     [0m /product/create   r:/product/create
+2019/10/01 12:03:59.837 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 12:03:59.838 [D] [asm_amd64.s:522]  get app list succ, data:[0xc00016b320]
+2019/10/01 12:03:59.842 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     5.0032ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 12:04:03.147 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 12:04:03.150 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     2.9862ms|   match|[44m GET     [0m /product/apply   r:/product/apply
+2019/10/01 12:04:11.163 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 12:04:11.277 [D] [product.go:114]  insert into database succ
+2019/10/01 12:04:11.277 [D] [server.go:2741]  |      127.0.0.1|[47m 302 [0m|   115.9965ms|   match|[44m GET     [0m /product/create   r:/product/create
+2019/10/01 12:04:11.283 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 12:04:11.283 [D] [asm_amd64.s:522]  get app list succ, data:[0xc000228480 0xc0002284b0]
+2019/10/01 12:04:11.287 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|      3.985ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 12:04:12.899 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 12:04:12.902 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     3.0186ms|   match|[44m GET     [0m /product/apply   r:/product/apply
+2019/10/01 12:04:18.576 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 12:04:18.669 [D] [product.go:114]  insert into database succ
+2019/10/01 12:04:18.669 [D] [server.go:2741]  |      127.0.0.1|[47m 302 [0m|    92.6542ms|   match|[44m GET     [0m /product/create   r:/product/create
+2019/10/01 12:04:18.683 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 12:04:18.684 [D] [asm_amd64.s:522]  get app list succ, data:[0xc00016aa50 0xc00016aa80 0xc00016aab0]
+2019/10/01 12:04:18.690 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     7.0036ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 12:04:35.446 [D] [activity.go:26]  get activity succ,  activity list is[[]]
+2019/10/01 12:04:35.461 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    15.9541ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 12:04:38.192 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     1.9874ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/01 12:04:58.654 [E] [activity.go:121]  start[1569885698]|end[1569989298] time is less then now[1569902698]
+2019/10/01 12:04:58.660 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     6.9815ms|   match|[44m GET     [0m /activity/create   r:/activity/create
+2019/10/01 12:05:21.815 [D] [activity.go:26]  get activity succ,  activity list is[[]]
+2019/10/01 12:05:21.818 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     3.0057ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 12:05:25.095 [D] [activity.go:26]  get activity succ,  activity list is[[]]
+2019/10/01 12:05:25.157 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     63.138ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 12:05:27.250 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     2.9987ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/01 12:05:29.183 [D] [activity.go:26]  get activity succ,  activity list is[[]]
+2019/10/01 12:05:29.187 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     5.0044ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 12:05:30.548 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 12:05:30.548 [D] [asm_amd64.s:522]  get app list succ, data:[0xc0003f6930 0xc0003f6960 0xc0003f6990]
+2019/10/01 12:05:30.551 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     2.9878ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 12:05:32.550 [D] [activity.go:26]  get activity succ,  activity list is[[]]
+2019/10/01 12:05:32.557 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     7.1274ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 12:05:34.706 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     3.0019ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/01 12:05:55.243 [D] [activity.go:121]  insert into database succ
+2019/10/01 12:05:55.271 [D] [activity.go:169]  start get from etcd succ
+2019/10/01 12:05:55.411 [D] [activity.go:169]  get from etcd succ, resp:&{cluster_id:14841639068965178418 member_id:10276657743932975437 revision:173 raft_term:13  [key:"/seckill/secProxy/product" create_revision:171 mod_revision:173 version:3 value:"[{\"ProductId\":1029,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1027,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1,\"StartTime\":1569985698,\"EndTime\":1569989298,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10}]" ] false 1}
+2019/10/01 12:05:55.418 [D] [activity.go:169]  key[0] valud[key:"/seckill/secProxy/product" create_revision:171 mod_revision:173 version:3 value:"[{\"ProductId\":1029,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1027,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1,\"StartTime\":1569985698,\"EndTime\":1569989298,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10}]" ]
+2019/10/01 12:05:55.418 [D] [activity.go:169]  sec info conf is [[{1029 1569899504 1569903104 0 1000 1000 2 0.1 10} {1027 1569899504 1569903104 0 2000 1000 2 0.1 10} {1 1569985698 1569989298 0 111 0 2 0.2 10}]]
+2019/10/01 12:05:55.443 [D] [activity.go:131]  put to etcd succ, data:[{"ProductId":1029,"StartTime":1569899504,"EndTime":1569903104,"Status":0,"Total":1000,"Left":1000,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10},{"ProductId":1027,"StartTime":1569899504,"EndTime":1569903104,"Status":0,"Total":2000,"Left":1000,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10},{"ProductId":1,"StartTime":1569985698,"EndTime":1569989298,"Status":0,"Total":111,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.2,"SoldMaxLimit":10},{"ProductId":1,"StartTime":1569995698,"EndTime":1569999298,"Status":0,"Total":111,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.2,"SoldMaxLimit":10}]
+2019/10/01 12:05:55.444 [D] [server.go:2741]  |      127.0.0.1|[47m 301 [0m|   277.9754ms|   match|[44m GET     [0m /activity/create   r:/activity/create
+2019/10/01 12:05:55.455 [D] [activity.go:26]  get activity succ,  activity list is[[0xc0003c0240]]
+2019/10/01 12:05:55.460 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     6.0296ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 12:06:16.136 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 12:06:16.178 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    42.2999ms|   match|[44m GET     [0m /product/apply   r:/product/apply
+2019/10/01 12:06:17.573 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 12:06:17.574 [D] [asm_amd64.s:522]  get app list succ, data:[0xc000354240 0xc000354270 0xc0003542a0]
+2019/10/01 12:06:17.579 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     5.9908ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 12:06:20.434 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 12:06:20.437 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     3.0019ms|   match|[44m GET     [0m /product/apply   r:/product/apply
+2019/10/01 12:06:21.687 [D] [activity.go:26]  get activity succ,  activity list is[[0xc00022a3f0]]
+2019/10/01 12:06:21.690 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     4.0018ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 12:06:23.654 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     6.0038ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/01 12:06:39.268 [D] [activity.go:121]  insert into database succ
+2019/10/01 12:06:39.268 [D] [activity.go:169]  start get from etcd succ
+2019/10/01 12:06:39.271 [D] [activity.go:169]  get from etcd succ, resp:&{cluster_id:14841639068965178418 member_id:10276657743932975437 revision:174 raft_term:13  [key:"/seckill/secProxy/product" create_revision:171 mod_revision:174 version:4 value:"[{\"ProductId\":1029,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1027,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1,\"StartTime\":1569985698,\"EndTime\":1569989298,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10},{\"ProductId\":1,\"StartTime\":1569995698,\"EndTime\":1569999298,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10}]" ] false 1}
+2019/10/01 12:06:39.271 [D] [activity.go:169]  key[0] valud[key:"/seckill/secProxy/product" create_revision:171 mod_revision:174 version:4 value:"[{\"ProductId\":1029,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1027,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1,\"StartTime\":1569985698,\"EndTime\":1569989298,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10},{\"ProductId\":1,\"StartTime\":1569995698,\"EndTime\":1569999298,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10}]" ]
+2019/10/01 12:06:39.271 [D] [activity.go:169]  sec info conf is [[{1029 1569899504 1569903104 0 1000 1000 2 0.1 10} {1027 1569899504 1569903104 0 2000 1000 2 0.1 10} {1 1569985698 1569989298 0 111 0 2 0.2 10} {1 1569995698 1569999298 0 111 0 2 0.2 10}]]
+2019/10/01 12:06:39.308 [D] [activity.go:131]  put to etcd succ, data:[{"ProductId":1029,"StartTime":1569899504,"EndTime":1569903104,"Status":0,"Total":1000,"Left":1000,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10},{"ProductId":1027,"StartTime":1569899504,"EndTime":1569903104,"Status":0,"Total":2000,"Left":1000,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10},{"ProductId":1,"StartTime":1569985698,"EndTime":1569989298,"Status":0,"Total":111,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.2,"SoldMaxLimit":10},{"ProductId":1,"StartTime":1569995698,"EndTime":1569999298,"Status":0,"Total":111,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.2,"SoldMaxLimit":10},{"ProductId":2,"StartTime":1569985698,"EndTime":1569989298,"Status":0,"Total":1000,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10}]
+2019/10/01 12:06:39.309 [D] [server.go:2741]  |      127.0.0.1|[47m 301 [0m|   134.2253ms|   match|[44m GET     [0m /activity/create   r:/activity/create
+2019/10/01 12:06:39.314 [D] [activity.go:26]  get activity succ,  activity list is[[0xc00022a360 0xc00022a3f0]]
+2019/10/01 12:06:39.316 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     3.0164ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 12:08:04.234 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 12:08:04.236 [D] [asm_amd64.s:522]  get app list succ, data:[0xc000228f90 0xc000228fc0 0xc000228ff0]
+2019/10/01 12:08:04.242 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     8.0046ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 12:10:42.267 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 12:10:42.269 [D] [asm_amd64.s:522]  get app list succ, data:[0xc000354690 0xc0003546c0 0xc0003546f0]
+2019/10/01 12:10:42.272 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     6.0043ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 12:10:45.730 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 12:10:45.733 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     3.0024ms|   match|[44m GET     [0m /product/apply   r:/product/apply
+2019/10/01 12:10:47.869 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 12:10:47.870 [D] [asm_amd64.s:522]  get app list succ, data:[0xc0003f2810 0xc0003f2840 0xc0003f2870]
+2019/10/01 12:10:47.874 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     5.0027ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 12:12:43.585 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 12:12:43.589 [D] [asm_amd64.s:522]  get app list succ, data:[0xc0003f2960 0xc0003f2ab0 0xc0003f2ae0]
+2019/10/01 12:12:43.598 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    14.0273ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 12:12:44.297 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/image/favicon.ico
+2019/10/01 12:12:52.823 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 12:12:52.832 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    10.0034ms|   match|[44m GET     [0m /product/apply   r:/product/apply
+2019/10/01 12:12:57.013 [D] [activity.go:26]  get activity succ,  activity list is[[0xc0004c6240 0xc0004c62d0]]
+2019/10/01 12:12:57.017 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     6.0205ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 12:12:59.079 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     8.0057ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/01 15:27:17.282 [D] [init.go:93]  connect to mysql succ
+2019/10/01 15:27:17.291 [D] [init.go:99]  connect to etcd succ
+2019/10/01 15:27:18.493 [I] [asm_amd64.s:1333]  http server Running on http://127.0.0.1:9090
+2019/10/01 15:27:28.445 [D] [init.go:93]  connect to mysql succ
+2019/10/01 15:27:28.450 [D] [init.go:99]  connect to etcd succ
+2019/10/01 15:27:28.675 [I] [asm_amd64.s:1333]  http server Running on http://127.0.0.1:9090
+2019/10/01 15:27:28.676 [C] [asm_amd64.s:1333]  ListenAndServe:  listen tcp 127.0.0.1:9090: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2019/10/01 15:27:59.531 [D] [init.go:93]  connect to mysql succ
+2019/10/01 15:27:59.544 [D] [init.go:99]  connect to etcd succ
+2019/10/01 15:27:59.756 [I] [asm_amd64.s:1333]  http server Running on http://127.0.0.1:9090
+2019/10/01 15:27:59.757 [C] [asm_amd64.s:1333]  ListenAndServe:  listen tcp 127.0.0.1:9090: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2019/10/01 15:35:59.206 [D] [init.go:93]  connect to mysql succ
+2019/10/01 15:35:59.209 [D] [init.go:99]  connect to etcd succ
+2019/10/01 15:35:59.419 [I] [asm_amd64.s:1333]  http server Running on http://127.0.0.1:9090
+2019/10/01 16:10:23.252 [D] [init.go:93]  connect to mysql succ
+2019/10/01 16:10:23.258 [D] [init.go:99]  connect to etcd succ
+2019/10/01 16:10:23.598 [I] [asm_amd64.s:1333]  http server Running on http://127.0.0.1:9090
+2019/10/01 16:11:42.499 [D] [init.go:93]  connect to mysql succ
+2019/10/01 16:11:42.720 [D] [init.go:99]  connect to etcd succ
+2019/10/01 16:11:42.893 [I] [asm_amd64.s:1333]  http server Running on http://127.0.0.1:9090
+2019/10/01 16:11:49.312 [D] [activity.go:26]  get activity succ,  activity list is[[0xc000232360 0xc0002323f0]]
+2019/10/01 16:11:49.356 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   2.7749582s|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 16:11:50.514 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    56.1538ms|   match|[44m GET     [0m /static/image/favicon.ico
+2019/10/01 16:12:35.163 [D] [activity.go:26]  get activity succ,  activity list is[[0xc0003761b0 0xc000376240]]
+2019/10/01 16:12:35.194 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    33.0232ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 16:26:52.591 [D] [activity.go:26]  get activity succ,  activity list is[[0xc0002463f0 0xc000246480]]
+2019/10/01 16:26:52.915 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   326.2331ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 16:27:06.144 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 16:27:07.586 [D] [asm_amd64.s:522]  get app list succ, data:[0xc00038c330 0xc00038c360 0xc00038c390]
+2019/10/01 16:27:07.778 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   1.6351613s|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 16:27:14.137 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 16:27:14.495 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   358.2587ms|   match|[44m GET     [0m /product/apply   r:/product/apply
+2019/10/01 16:27:31.059 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 16:27:31.061 [D] [asm_amd64.s:522]  get app list succ, data:[0xc00018df20 0xc00018df50 0xc00018df80]
+2019/10/01 16:27:31.432 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   374.2684ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 16:27:34.848 [D] [activity.go:26]  get activity succ,  activity list is[[0xc00029c1b0 0xc00029c240]]
+2019/10/01 16:27:35.409 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   701.4982ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 16:27:38.026 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   295.2093ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/01 16:29:18.751 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 16:29:18.752 [D] [asm_amd64.s:522]  get app list succ, data:[0xc0003b7a70 0xc00018c150 0xc00018c1e0]
+2019/10/01 16:29:18.970 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   218.1516ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 17:12:00.852 [D] [init.go:93]  connect to mysql succ
+2019/10/01 17:12:00.860 [D] [init.go:99]  connect to etcd succ
+2019/10/01 17:12:01.121 [I] [asm_amd64.s:1333]  http server Running on http://127.0.0.1:9090
+2019/10/01 17:56:27.561 [D] [init.go:93]  connect to mysql succ
+2019/10/01 17:56:27.564 [D] [init.go:99]  connect to etcd succ
+2019/10/01 17:56:28.072 [I] [asm_amd64.s:1333]  http server Running on http://127.0.0.1:9090
+2019/10/01 18:17:43.235 [D] [init.go:93]  connect to mysql succ
+2019/10/01 18:17:43.237 [D] [init.go:99]  connect to etcd succ
+2019/10/01 18:17:43.645 [I] [asm_amd64.s:1333]  http server Running on http://127.0.0.1:9090
+2019/10/01 20:23:34.747 [D] [init.go:93]  connect to mysql succ
+2019/10/01 20:23:34.751 [D] [init.go:99]  connect to etcd succ
+2019/10/01 20:23:34.936 [I] [asm_amd64.s:1333]  http server Running on http://127.0.0.1:9090
+2019/10/01 20:24:49.464 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 20:24:50.133 [D] [asm_amd64.s:522]  get app list succ, data:[0xc0003543f0 0xc000354420 0xc000354450]
+2019/10/01 20:24:50.144 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   680.4723ms|   match|[44m GET     [0m /     r:/
+2019/10/01 20:24:57.661 [D] [activity.go:26]  get activity succ,  activity list is[[0xc0002103f0 0xc000210480]]
+2019/10/01 20:24:57.666 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     88.063ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 20:25:17.861 [D] [server.go:2741]  |      127.0.0.1|[43m 404 [0m|      1.002ms| nomatch|[44m GET     [0m /login
+2019/10/01 20:25:18.585 [D] [server.go:2741]  |      127.0.0.1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /favicon.ico
+2019/10/01 20:28:54.806 [D] [activity.go:26]  get activity succ,  activity list is[[0xc0002302d0 0xc000230360]]
+2019/10/01 20:28:54.818 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    64.0465ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 20:28:57.406 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     12.001ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/01 20:28:59.044 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 20:28:59.051 [D] [asm_amd64.s:522]  get app list succ, data:[0xc0004e1080 0xc0004e10b0 0xc0004e10e0]
+2019/10/01 20:28:59.081 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     37.019ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 20:29:01.354 [D] [activity.go:26]  get activity succ,  activity list is[[0xc0002306c0 0xc000230750]]
+2019/10/01 20:29:01.380 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    28.0248ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 20:29:03.521 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    11.0129ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/01 20:38:30.383 [D] [activity.go:121]  insert into database succ
+2019/10/01 20:38:30.874 [D] [activity.go:169]  start get from etcd succ
+2019/10/01 20:38:37.992 [D] [activity.go:169]  get from etcd succ, resp:&{cluster_id:14841639068965178418 member_id:10276657743932975437 revision:175 raft_term:14  [key:"/seckill/secProxy/product" create_revision:171 mod_revision:175 version:5 value:"[{\"ProductId\":1029,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1027,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1,\"StartTime\":1569985698,\"EndTime\":1569989298,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10},{\"ProductId\":1,\"StartTime\":1569995698,\"EndTime\":1569999298,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10},{\"ProductId\":2,\"StartTime\":1569985698,\"EndTime\":1569989298,\"Status\":0,\"Total\":1000,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10}]" ] false 1}
+2019/10/01 20:38:38.004 [D] [activity.go:169]  key[0] valud[key:"/seckill/secProxy/product" create_revision:171 mod_revision:175 version:5 value:"[{\"ProductId\":1029,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1027,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1,\"StartTime\":1569985698,\"EndTime\":1569989298,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10},{\"ProductId\":1,\"StartTime\":1569995698,\"EndTime\":1569999298,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10},{\"ProductId\":2,\"StartTime\":1569985698,\"EndTime\":1569989298,\"Status\":0,\"Total\":1000,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10}]" ]
+2019/10/01 20:38:38.104 [D] [activity.go:169]  sec info conf is [[{1029 1569899504 1569903104 0 1000 1000 2 0.1 10} {1027 1569899504 1569903104 0 2000 1000 2 0.1 10} {1 1569985698 1569989298 0 111 0 2 0.2 10} {1 1569995698 1569999298 0 111 0 2 0.2 10} {2 1569985698 1569989298 0 1000 0 2 0.1 10}]]
+2019/10/01 20:38:38.988 [D] [activity.go:131]  put to etcd succ, data:[{"ProductId":1029,"StartTime":1569899504,"EndTime":1569903104,"Status":0,"Total":1000,"Left":1000,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10},{"ProductId":1027,"StartTime":1569899504,"EndTime":1569903104,"Status":0,"Total":2000,"Left":1000,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10},{"ProductId":1,"StartTime":1569985698,"EndTime":1569989298,"Status":0,"Total":111,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.2,"SoldMaxLimit":10},{"ProductId":1,"StartTime":1569995698,"EndTime":1569999298,"Status":0,"Total":111,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.2,"SoldMaxLimit":10},{"ProductId":2,"StartTime":1569985698,"EndTime":1569989298,"Status":0,"Total":1000,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10},{"ProductId":3,"StartTime":1569933638,"EndTime":1569933700,"Status":0,"Total":111,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10}]
+2019/10/01 20:38:38.993 [D] [server.go:2741]  |      127.0.0.1|[47m 301 [0m|  16.8938377s|   match|[44m GET     [0m /activity/create   r:/activity/create
+2019/10/01 20:38:39.306 [D] [activity.go:26]  get activity succ,  activity list is[[0xc0002303f0 0xc000230480 0xc000230510]]
+2019/10/01 20:38:40.325 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   1.2379427s|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 22:03:49.019 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 22:03:49.630 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 22:03:51.106 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   1.3399827s|   match|[44m GET     [0m /product/apply   r:/product/apply
+2019/10/01 22:03:54.639 [D] [asm_amd64.s:522]  get app list succ, data:[0xc000227bf0 0xc000227c20 0xc000227c50]
+2019/10/01 22:03:55.084 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   6.5887321s|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 22:03:57.206 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 22:03:57.239 [D] [asm_amd64.s:522]  get app list succ, data:[0xc0004e0600 0xc0004e0630 0xc0004e0660]
+2019/10/01 22:03:57.309 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   103.0562ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 22:04:00.009 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 22:04:00.147 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   141.1053ms|   match|[44m GET     [0m /product/apply   r:/product/apply
+2019/10/01 22:04:18.105 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 22:04:18.606 [D] [product.go:114]  insert into database succ
+2019/10/01 22:04:18.625 [D] [server.go:2741]  |      127.0.0.1|[47m 302 [0m|   519.3694ms|   match|[44m GET     [0m /product/create   r:/product/create
+2019/10/01 22:04:18.664 [D] [asm_amd64.s:522]  enter index controller
+2019/10/01 22:04:18.665 [D] [asm_amd64.s:522]  get app list succ, data:[0xc000166c00 0xc000166c30 0xc000166c60 0xc000166c90]
+2019/10/01 22:04:18.711 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    48.0287ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/01 22:04:22.279 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    82.0636ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/01 22:04:55.196 [D] [activity.go:121]  insert into database succ
+2019/10/01 22:04:55.197 [D] [activity.go:169]  start get from etcd succ
+2019/10/01 22:04:55.581 [D] [activity.go:169]  get from etcd succ, resp:&{cluster_id:14841639068965178418 member_id:10276657743932975437 revision:176 raft_term:14  [key:"/seckill/secProxy/product" create_revision:171 mod_revision:176 version:6 value:"[{\"ProductId\":1029,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1027,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1,\"StartTime\":1569985698,\"EndTime\":1569989298,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10},{\"ProductId\":1,\"StartTime\":1569995698,\"EndTime\":1569999298,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10},{\"ProductId\":2,\"StartTime\":1569985698,\"EndTime\":1569989298,\"Status\":0,\"Total\":1000,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":3,\"StartTime\":1569933638,\"EndTime\":1569933700,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10}]" ] false 1}
+2019/10/01 22:04:55.606 [D] [activity.go:169]  key[0] valud[key:"/seckill/secProxy/product" create_revision:171 mod_revision:176 version:6 value:"[{\"ProductId\":1029,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1027,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1,\"StartTime\":1569985698,\"EndTime\":1569989298,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10},{\"ProductId\":1,\"StartTime\":1569995698,\"EndTime\":1569999298,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10},{\"ProductId\":2,\"StartTime\":1569985698,\"EndTime\":1569989298,\"Status\":0,\"Total\":1000,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":3,\"StartTime\":1569933638,\"EndTime\":1569933700,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10}]" ]
+2019/10/01 22:04:55.669 [D] [activity.go:169]  sec info conf is [[{1029 1569899504 1569903104 0 1000 1000 2 0.1 10} {1027 1569899504 1569903104 0 2000 1000 2 0.1 10} {1 1569985698 1569989298 0 111 0 2 0.2 10} {1 1569995698 1569999298 0 111 0 2 0.2 10} {2 1569985698 1569989298 0 1000 0 2 0.1 10} {3 1569933638 1569933700 0 111 0 2 0.1 10}]]
+2019/10/01 22:04:56.437 [D] [activity.go:131]  put to etcd succ, data:[{"ProductId":1029,"StartTime":1569899504,"EndTime":1569903104,"Status":0,"Total":1000,"Left":1000,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10},{"ProductId":1027,"StartTime":1569899504,"EndTime":1569903104,"Status":0,"Total":2000,"Left":1000,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10},{"ProductId":1,"StartTime":1569985698,"EndTime":1569989298,"Status":0,"Total":111,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.2,"SoldMaxLimit":10},{"ProductId":1,"StartTime":1569995698,"EndTime":1569999298,"Status":0,"Total":111,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.2,"SoldMaxLimit":10},{"ProductId":2,"StartTime":1569985698,"EndTime":1569989298,"Status":0,"Total":1000,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10},{"ProductId":3,"StartTime":1569933638,"EndTime":1569933700,"Status":0,"Total":111,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10},{"ProductId":4,"StartTime":1569938798,"EndTime":1570025198,"Status":0,"Total":12333,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.2,"SoldMaxLimit":10}]
+2019/10/01 22:04:56.439 [D] [server.go:2741]  |      127.0.0.1|[47m 301 [0m|   1.4860876s|   match|[44m GET     [0m /activity/create   r:/activity/create
+2019/10/01 22:04:56.469 [D] [activity.go:26]  get activity succ,  activity list is[[0xc0002303f0 0xc000230480 0xc000230510 0xc0002305a0]]
+2019/10/01 22:04:56.513 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    61.0555ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 22:05:14.588 [D] [activity.go:26]  get activity succ,  activity list is[[0xc0002302d0 0xc000230360 0xc000230630 0xc0002306c0]]
+2019/10/01 22:05:14.620 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    33.0221ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 22:05:15.409 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   105.0749ms|   match|[44m GET     [0m /static/image/favicon.ico
+2019/10/01 22:05:55.774 [D] [activity.go:26]  get activity succ,  activity list is[[0xc0002103f0 0xc000210480 0xc000210510 0xc0002105a0]]
+2019/10/01 22:05:55.782 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     16.007ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 22:05:56.444 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/image/favicon.ico
+2019/10/01 22:07:01.022 [D] [activity.go:26]  get activity succ,  activity list is[[0xc0002821b0 0xc000282240 0xc0002822d0 0xc000282360]]
+2019/10/01 22:07:01.039 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    68.0434ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 22:07:01.653 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|      989.1µs|   match|[44m GET     [0m /static/image/favicon.ico
+2019/10/01 22:07:03.410 [D] [activity.go:26]  get activity succ,  activity list is[[0xc000230240 0xc0002302d0 0xc000230360 0xc0002303f0]]
+2019/10/01 22:07:03.417 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     6.9993ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/01 22:07:03.890 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/image/favicon.ico
+2019/10/02 10:10:24.852 [D] [init.go:93]  connect to mysql succ
+2019/10/02 10:10:24.855 [D] [init.go:99]  connect to etcd succ
+2019/10/02 10:10:25.042 [I] [asm_amd64.s:1333]  http server Running on http://127.0.0.1:9090
+2019/10/02 10:11:08.600 [D] [asm_amd64.s:522]  enter index controller
+2019/10/02 10:11:08.958 [D] [asm_amd64.s:522]  get app list succ, data:[0xc000281740 0xc000281770 0xc0002817a0 0xc0002817d0]
+2019/10/02 10:11:09.054 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   882.0653ms|   match|[44m GET     [0m /     r:/
+2019/10/02 10:11:09.327 [D] [server.go:2741]  |      127.0.0.1|[47m 304 [0m|    69.0488ms|   match|[44m GET     [0m /static/image/blank.jpg
+2019/10/02 10:12:35.551 [D] [asm_amd64.s:522]  enter index controller
+2019/10/02 10:12:35.552 [D] [asm_amd64.s:522]  get app list succ, data:[0xc000280690 0xc0002806c0 0xc0002808d0 0xc000280930]
+2019/10/02 10:12:35.556 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    23.0258ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/02 10:12:37.361 [D] [asm_amd64.s:522]  enter index controller
+2019/10/02 10:12:37.365 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|      4.018ms|   match|[44m GET     [0m /product/apply   r:/product/apply
+2019/10/02 10:12:39.604 [D] [activity.go:26]  get activity succ,  activity list is[[0xc000228480 0xc000228510 0xc0002285a0 0xc000228630]]
+2019/10/02 10:12:39.607 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    61.0533ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/02 10:12:44.236 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    52.0504ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/02 10:12:46.425 [D] [activity.go:26]  get activity succ,  activity list is[[0xc00023c360 0xc00023c3f0 0xc00023c480 0xc00023c510]]
+2019/10/02 10:12:46.428 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     4.0201ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/02 10:12:47.505 [D] [asm_amd64.s:522]  enter index controller
+2019/10/02 10:12:47.505 [D] [asm_amd64.s:522]  get app list succ, data:[0xc00010ccc0 0xc00010ccf0 0xc00010cd20 0xc00010cd50]
+2019/10/02 10:12:47.509 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     4.0207ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/02 16:42:02.730 [D] [asm_amd64.s:522]  enter index controller
+2019/10/02 16:42:02.950 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   228.6006ms|   match|[44m GET     [0m /product/apply   r:/product/apply
+2019/10/02 16:42:35.081 [D] [asm_amd64.s:522]  enter index controller
+2019/10/02 16:42:36.030 [D] [product.go:114]  insert into database succ
+2019/10/02 16:42:36.031 [D] [server.go:2741]  |      127.0.0.1|[47m 302 [0m|   949.2298ms|   match|[44m GET     [0m /product/create   r:/product/create
+2019/10/02 16:42:36.044 [D] [asm_amd64.s:522]  enter index controller
+2019/10/02 16:42:36.096 [D] [asm_amd64.s:522]  get app list succ, data:[0xc0003ac8d0 0xc0003ac900 0xc0003ac930 0xc0003ac960 0xc0003ac990]
+2019/10/02 16:42:36.186 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   141.9145ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/02 16:42:39.260 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|     52.065ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/02 16:43:08.058 [D] [activity.go:121]  insert into database succ
+2019/10/02 16:43:08.073 [D] [activity.go:169]  start get from etcd succ
+2019/10/02 16:43:08.545 [D] [activity.go:169]  get from etcd succ, resp:&{cluster_id:14841639068965178418 member_id:10276657743932975437 revision:177 raft_term:15  [key:"/seckill/secProxy/product" create_revision:171 mod_revision:177 version:7 value:"[{\"ProductId\":1029,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1027,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1,\"StartTime\":1569985698,\"EndTime\":1569989298,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10},{\"ProductId\":1,\"StartTime\":1569995698,\"EndTime\":1569999298,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10},{\"ProductId\":2,\"StartTime\":1569985698,\"EndTime\":1569989298,\"Status\":0,\"Total\":1000,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":3,\"StartTime\":1569933638,\"EndTime\":1569933700,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":4,\"StartTime\":1569938798,\"EndTime\":1570025198,\"Status\":0,\"Total\":12333,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10}]" ] false 1}
+2019/10/02 16:43:08.555 [D] [activity.go:169]  key[0] valud[key:"/seckill/secProxy/product" create_revision:171 mod_revision:177 version:7 value:"[{\"ProductId\":1029,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1027,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1,\"StartTime\":1569985698,\"EndTime\":1569989298,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10},{\"ProductId\":1,\"StartTime\":1569995698,\"EndTime\":1569999298,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10},{\"ProductId\":2,\"StartTime\":1569985698,\"EndTime\":1569989298,\"Status\":0,\"Total\":1000,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":3,\"StartTime\":1569933638,\"EndTime\":1569933700,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":4,\"StartTime\":1569938798,\"EndTime\":1570025198,\"Status\":0,\"Total\":12333,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10}]" ]
+2019/10/02 16:43:08.588 [D] [activity.go:169]  sec info conf is [[{1029 1569899504 1569903104 0 1000 1000 2 0.1 10} {1027 1569899504 1569903104 0 2000 1000 2 0.1 10} {1 1569985698 1569989298 0 111 0 2 0.2 10} {1 1569995698 1569999298 0 111 0 2 0.2 10} {2 1569985698 1569989298 0 1000 0 2 0.1 10} {3 1569933638 1569933700 0 111 0 2 0.1 10} {4 1569938798 1570025198 0 12333 0 2 0.2 10}]]
+2019/10/02 16:43:08.745 [D] [activity.go:131]  put to etcd succ, data:[{"ProductId":1029,"StartTime":1569899504,"EndTime":1569903104,"Status":0,"Total":1000,"Left":1000,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10},{"ProductId":1027,"StartTime":1569899504,"EndTime":1569903104,"Status":0,"Total":2000,"Left":1000,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10},{"ProductId":1,"StartTime":1569985698,"EndTime":1569989298,"Status":0,"Total":111,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.2,"SoldMaxLimit":10},{"ProductId":1,"StartTime":1569995698,"EndTime":1569999298,"Status":0,"Total":111,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.2,"SoldMaxLimit":10},{"ProductId":2,"StartTime":1569985698,"EndTime":1569989298,"Status":0,"Total":1000,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10},{"ProductId":3,"StartTime":1569933638,"EndTime":1569933700,"Status":0,"Total":111,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10},{"ProductId":4,"StartTime":1569938798,"EndTime":1570025198,"Status":0,"Total":12333,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.2,"SoldMaxLimit":10},{"ProductId":5,"StartTime":1570005819,"EndTime":1570265019,"Status":0,"Total":12333,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.8,"SoldMaxLimit":10}]
+2019/10/02 16:43:08.747 [D] [server.go:2741]  |      127.0.0.1|[47m 301 [0m|   1.1108107s|   match|[44m GET     [0m /activity/create   r:/activity/create
+2019/10/02 16:43:08.829 [D] [activity.go:26]  get activity succ,  activity list is[[0xc00023c2d0 0xc00023c360 0xc00023c3f0 0xc00023c480 0xc00023c510]]
+2019/10/02 16:43:09.240 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   482.1511ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/02 17:28:58.038 [D] [asm_amd64.s:522]  enter index controller
+2019/10/02 17:28:59.124 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   1.6101346s|   match|[44m GET     [0m /product/apply   r:/product/apply
+2019/10/02 17:28:59.386 [D] [asm_amd64.s:522]  enter index controller
+2019/10/02 17:29:00.225 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   974.7065ms|   match|[44m GET     [0m /product/apply   r:/product/apply
+2019/10/02 17:29:32.263 [D] [asm_amd64.s:522]  enter index controller
+2019/10/02 17:29:33.703 [D] [product.go:114]  insert into database succ
+2019/10/02 17:29:33.715 [D] [server.go:2741]  |      127.0.0.1|[47m 302 [0m|   1.4530601s|   match|[44m GET     [0m /product/create   r:/product/create
+2019/10/02 17:29:33.729 [D] [asm_amd64.s:522]  enter index controller
+2019/10/02 17:29:33.856 [D] [asm_amd64.s:522]  get app list succ, data:[0xc000239860 0xc000239890 0xc0002398c0 0xc0002398f0 0xc000239920 0xc000239950]
+2019/10/02 17:29:33.950 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   221.1578ms|   match|[44m GET     [0m /product/list   r:/product/list
+2019/10/02 17:29:38.475 [D] [activity.go:26]  get activity succ,  activity list is[[0xc0002283f0 0xc000228480 0xc000228510 0xc0002285a0 0xc000228630]]
+2019/10/02 17:29:38.714 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   360.3109ms|   match|[44m GET     [0m /activity/list   r:/activity/list
+2019/10/02 17:29:41.836 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|   107.0682ms|   match|[44m GET     [0m /activity/apply   r:/activity/apply
+2019/10/02 17:30:28.743 [D] [activity.go:121]  insert into database succ
+2019/10/02 17:30:28.744 [D] [activity.go:169]  start get from etcd succ
+2019/10/02 17:30:28.930 [D] [activity.go:169]  get from etcd succ, resp:&{cluster_id:14841639068965178418 member_id:10276657743932975437 revision:178 raft_term:15  [key:"/seckill/secProxy/product" create_revision:171 mod_revision:178 version:8 value:"[{\"ProductId\":1029,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1027,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1,\"StartTime\":1569985698,\"EndTime\":1569989298,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10},{\"ProductId\":1,\"StartTime\":1569995698,\"EndTime\":1569999298,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10},{\"ProductId\":2,\"StartTime\":1569985698,\"EndTime\":1569989298,\"Status\":0,\"Total\":1000,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":3,\"StartTime\":1569933638,\"EndTime\":1569933700,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":4,\"StartTime\":1569938798,\"EndTime\":1570025198,\"Status\":0,\"Total\":12333,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10},{\"ProductId\":5,\"StartTime\":1570005819,\"EndTime\":1570265019,\"Status\":0,\"Total\":12333,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.8,\"SoldMaxLimit\":10}]" ] false 1}
+2019/10/02 17:30:28.962 [D] [activity.go:169]  key[0] valud[key:"/seckill/secProxy/product" create_revision:171 mod_revision:178 version:8 value:"[{\"ProductId\":1029,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1027,\"StartTime\":1569899504,\"EndTime\":1569903104,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":1,\"StartTime\":1569985698,\"EndTime\":1569989298,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10},{\"ProductId\":1,\"StartTime\":1569995698,\"EndTime\":1569999298,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10},{\"ProductId\":2,\"StartTime\":1569985698,\"EndTime\":1569989298,\"Status\":0,\"Total\":1000,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":3,\"StartTime\":1569933638,\"EndTime\":1569933700,\"Status\":0,\"Total\":111,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.1,\"SoldMaxLimit\":10},{\"ProductId\":4,\"StartTime\":1569938798,\"EndTime\":1570025198,\"Status\":0,\"Total\":12333,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.2,\"SoldMaxLimit\":10},{\"ProductId\":5,\"StartTime\":1570005819,\"EndTime\":1570265019,\"Status\":0,\"Total\":12333,\"Left\":0,\"OnePersonBuyLimit\":2,\"BuyRate\":0.8,\"SoldMaxLimit\":10}]" ]
+2019/10/02 17:30:28.969 [D] [activity.go:169]  sec info conf is [[{1029 1569899504 1569903104 0 1000 1000 2 0.1 10} {1027 1569899504 1569903104 0 2000 1000 2 0.1 10} {1 1569985698 1569989298 0 111 0 2 0.2 10} {1 1569995698 1569999298 0 111 0 2 0.2 10} {2 1569985698 1569989298 0 1000 0 2 0.1 10} {3 1569933638 1569933700 0 111 0 2 0.1 10} {4 1569938798 1570025198 0 12333 0 2 0.2 10} {5 1570005819 1570265019 0 12333 0 2 0.8 10}]]
+2019/10/02 17:30:28.990 [D] [activity.go:131]  put to etcd succ, data:[{"ProductId":1029,"StartTime":1569899504,"EndTime":1569903104,"Status":0,"Total":1000,"Left":1000,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10},{"ProductId":1027,"StartTime":1569899504,"EndTime":1569903104,"Status":0,"Total":2000,"Left":1000,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10},{"ProductId":1,"StartTime":1569985698,"EndTime":1569989298,"Status":0,"Total":111,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.2,"SoldMaxLimit":10},{"ProductId":1,"StartTime":1569995698,"EndTime":1569999298,"Status":0,"Total":111,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.2,"SoldMaxLimit":10},{"ProductId":2,"StartTime":1569985698,"EndTime":1569989298,"Status":0,"Total":1000,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10},{"ProductId":3,"StartTime":1569933638,"EndTime":1569933700,"Status":0,"Total":111,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.1,"SoldMaxLimit":10},{"ProductId":4,"StartTime":1569938798,"EndTime":1570025198,"Status":0,"Total":12333,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.2,"SoldMaxLimit":10},{"ProductId":5,"StartTime":1570005819,"EndTime":1570265019,"Status":0,"Total":12333,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.8,"SoldMaxLimit":10},{"ProductId":6,"StartTime":1570008690,"EndTime":1570267814,"Status":0,"Total":5,"Left":0,"OnePersonBuyLimit":2,"BuyRate":0.8,"SoldMaxLimit":10}]
+2019/10/02 17:30:28.991 [D] [server.go:2741]  |      127.0.0.1|[47m 301 [0m|   378.2291ms|   match|[44m GET     [0m /activity/create   r:/activity/create
+2019/10/02 17:30:29.010 [D] [activity.go:26]  get activity succ,  activity list is[[0xc000228360 0xc0002286c0 0xc000228750 0xc0002287e0 0xc000228870 0xc000228900]]
+2019/10/02 17:30:29.038 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|    28.0193ms|   match|[44m GET     [0m /activity/list   r:/activity/list
